@@ -1,0 +1,89 @@
+.card-body:has(#overridesAndUsageChart),
+.card-body:has(#colorAndFontUsageChart),
+.card-body:has(#stackedUsageChart),
+.card-body:has(.highcharts),
+.card-body:has(.toplist) {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: 'Uppdateras på måndagskvällar';
+        bottom: 8px;
+        right: 24px;
+        font-size: 9px;
+        color: #999999;
+    }
+}
+
+ol.toplist {
+    list-style: none;
+    counter-reset: toplist-counter;
+    margin: 0;
+    padding: 0;
+}
+
+.toplist > li {
+    position: relative;
+    padding-left: 44px;
+    counter-increment: toplist-counter;
+}
+
+.toplist > li::before {
+    position: absolute;
+    left: 0;
+    content: counter(toplist-counter);
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+    letter-spacing: 0.0125rem;
+
+    background-color: rgb(229, 248, 242);
+    color: rgb(5, 155, 114);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+}
+
+.toplist ul {
+    padding: 0;
+    margin: 12px 0 32px 0;
+    list-style-type: none;
+}
+
+.toplist ul li {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 8px 12px;
+    margin: 12px 0;
+    color: #222;
+}
+
+.toplist ul li .value {
+    color: #6a6a6a;
+}
+
+.toplist ul li .bar {
+    display: block;
+    background: #e5f8f2;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 500px;
+    z-index: -1;
+}
+
+.totalMrs {
+    font-size: 17px;;
+    color: var(--theme-heading, #42b983);
+    font-weight: 700;
+    line-height: 1.2;
+}
+

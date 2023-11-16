@@ -1,0 +1,17 @@
+`COMPONENT_HEAD({"title": "Text expander", "module": "TextExpanderModule", "package": "@avanzabank/mint-text-expander"})`
+
+
+
+Används när vi vill visa en delmängd av information och ge användaren möjlighet att se all information.
+
+<div class="component-example-container" data-example-path="/mint/text-expander/#/dj?apiTab=input&ngContent=Lorem%2520Ipsum%2520is%2520simply%2520dummy%2520text%2520of%2520the%2520printing%2520and%2520typesetting%2520industry.%2520Lorem%2520Ipsum%2520has%2520been%2520the%2520industry's%2520standard%2520dummy%2520text%2520ever%2520since%2520the%25201500s%252C%2520when%2520an%2520unknown%2520printer%2520took%2520a%2520galley%2520of%2520type%2520and%2520scrambled%2520it%2520to%2520make%2520a%2520type%2520specimen%2520book.%2520It%2520has%2520survived%2520not%2520only%2520five%2520centuries%252C%2520but%2520also%2520the%2520leap%2520into%2520electronic%2520typesetting%252C%2520remaining%2520essentially%2520unchanged.%2520It%2520was%2520popularised%2520in%2520the%25201960s%2520with%2520the%2520release%2520of%2520Letraset%2520sheets%2520containing%2520Lorem%2520Ipsum%2520passages%252C%2520and%2520more%2520recently%2520with%2520desktop%2520publishing%2520software%2520like%2520Aldus%2520PageMaker%2520including%2520versions%2520of%2520Lorem%2520Ipsum.%2520Lorem%2520Ipsum%2520is%2520simply%2520dummy%2520text%2520of%2520the%2520printing%2520and%2520typesetting%2520industry.%2520Lorem%2520Ipsum%2520has%2520been%2520the%2520industry's%2520standard%2520dummy%2520text%2520ever%2520since%2520the%25201500s%252C%2520when%2520an%2520unknown%2520printer%2520took%2520a%2520galley%2520of%2520type%2520and%2520scrambled%2520it%2520to%2520make%2520a%2520type%2520specimen%2520book.%2520It%2520has%2520survived%2520not%2520only%2520five%2520centuries%252C%2520but%2520also%2520the%2520leap%2520into%2520electronic%2520typesetting%252C%2520remaining%2520essentially%2520unchanged.%2520It%2520was%2520popularised%2520in%2520the%25201960s%2520with%2520the%2520release%2520of%2520Letraset%2520sheets%2520containing%2520Lorem%2520Ipsum%2520passages%252C%2520and%2520more%2520recently%2520with%2520desktop%2520publishing%2520software%2520like%2520Aldus%2520PageMaker%2520including%2520versions%2520of%2520Lorem%2520Ipsum.%2520Lorem%2520Ipsum%2520is%2520simply%2520dummy%2520text%2520of%2520the%2520printing%2520and%2520typesetting%2520industry.%2520Lorem%2520Ipsum%2520has%2520been%2520the%2520industry's%2520standard%2520dummy%2520text%2520ever%2520since%2520the%25201500s%252C%2520when%2520an%2520unknown%2520printer%2520took%2520a%2520galley%2520of%2520type%2520and%2520scrambled%2520it%2520to%2520make%2520a%2520type%2520specimen%2520book.%2520It%2520has%2520survived%2520not%2520only%2520five%2520centuries%252C%2520but%2520also%2520the%2520leap%2520into%2520electronic%2520typesetting%252C%2520remaining%2520essentially%2520unchanged.%2520It%2520was%2520popularised%2520in%2520the%25201960s%2520with%2520the%2520release%2520of%2520Letraset%2520sheets%2520containing%2520Lorem%2520Ipsum%2520passages%252C%2520and%2520more%2520recently%2520with%2520desktop%2520publishing%2520software%2520like%2520Aldus%2520PageMaker%2520including%2520versions%2520of%2520Lorem%2520Ipsum." ></div>
+
+## Exempel där komponenten används
+* [Fondguiden](https://www.avanza.se/fonder/om-fonden.html/788394/avanza-auto-6)
+
+## API
+<div class="component-library-api" data-package-name="text-expander"></div>
+
+
+
+[filename](includes/_componentFooter.md ':include')

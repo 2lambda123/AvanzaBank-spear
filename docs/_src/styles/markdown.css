@@ -1,0 +1,341 @@
+/* markdown content found on pages */
+.markdown-section {
+  margin: 0;
+  padding: 24px 12px 48px 12px;
+}
+.markdown-section:first-child {
+  padding-top: 100px;
+}
+.markdown-section:last-child {
+  padding-bottom: calc(2vw + 140px);
+}
+.markdown-section hr,
+.markdown-section p.warn,
+.markdown-section p.tip,
+.markdown-section blockquote,
+.markdown-section iframe,
+.markdown-section pre {
+    margin: 16px 0 48px 0;
+}
+.markdown-section video,
+.markdown-section iframe {
+    max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .markdown-section iframe.full-width {
+      width: calc(100vw - 430px);
+      max-width: none;
+  }
+}
+
+.markdown-section a {
+  color: var(--theme-link, #42b983);
+}
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4 {
+  color: var(--theme-heading, #42b983);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.markdown-section h1 a,
+.markdown-section h2 a,
+.markdown-section h3 a,
+.markdown-section h4 a {
+  color: var(--theme-heading, #42b983);
+}
+.markdown-section h1 {
+  font-size: 32px;
+  margin: 0 0 20px 0;
+}
+.markdown-section h2 {
+  font-size: 20px;
+  margin: -32px 0 16px 0;
+  padding-top: 80px; /* needed for scroll-to-anchor */
+}
+.markdown-section h3 {
+  font-size: 17px;
+  margin: 32px 0 12px 0;
+}
+.markdown-section h4,
+.markdown-section h5,
+.markdown-section h6  {
+  font-size: 15px;
+  margin: 32px 0 8px 0;
+}
+.markdown-section figure,
+.markdown-section p {
+  margin: 0 0 16px 0;
+}
+.markdown-section table * {
+  border: none;
+  vertical-align: top;
+}
+.markdown-section table tr {
+  margin: 16px 0 24px 0;
+}
+.markdown-section table th {
+  text-align: left;
+}
+.markdown-section table td {
+  padding: 12px 12px 24px 12px;
+  background: #FFF;
+  max-width: 500px;
+  border-top: 1px solid #ddd;
+}
+.markdown-section table th:first-child,
+.markdown-section table td:first-child {
+  padding-left: 0;
+}
+.markdown-section table th:last-child,
+.markdown-section table td:last-child {
+  padding-right: 0;
+}
+.markdown-section table small {
+  display: block;
+}
+.markdown-section p,
+.markdown-section ul,
+.markdown-section ol {
+  line-height: 1.6;
+}
+.markdown-section small {
+  color: #AEAEAE;
+  margin: 12px 0;
+}
+.markdown-section ul,
+.markdown-section ol {
+  padding-left: 1rem;
+}
+.markdown-section p.preamble { 
+  font-size: 16px;
+  line-height: 1.5;
+}
+.markdown-section p.warn {
+  background-color: #fff6e3;
+  border-radius: 10px;
+}
+.markdown-section p.do,
+.markdown-section p.dont {
+  max-width: 320px;
+  width: 100%;
+  display: inline-block;
+  padding-top: 12px;
+  vertical-align: top;
+}
+@media (min-width: 1024px) {
+    .markdown-section p.do,
+    .markdown-section p.dont {
+        margin-right: 30px;
+    }
+}
+.markdown-section p.do {
+  border-top: 6px solid green;
+}
+.markdown-section p.do strong:first-of-type {
+  color: green;
+}
+.markdown-section p.dont {
+  border-top: 6px solid red;
+}
+.markdown-section p.dont strong:first-of-type {
+  color: red;
+}
+.markdown-section .dosdonts {
+  width: 100%;
+  display: block;
+  margin-top: 16px;
+}
+.markdown-section .dosdonts p {
+    margin-bottom: 48px;
+}
+.markdown-section .dosdonts img {
+  background: #FAFAFA;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  margin-top: -18px;
+}
+.markdown-section .dosdonts p.do img {
+  border-bottom: 6px solid green;
+}
+.markdown-section .dosdonts p.dont img {
+  border-bottom: 6px solid red;
+}
+.markdown-section blockquote {
+    border-left: 3px solid var(--theme-color, #000);
+    color: #858585;
+    padding-left: 20px;
+}
+.markdown-section blockquote p {
+    margin-left: 0;
+}
+.markdown-section em {
+  color: #7f8c8d;
+}
+.markdown-section code {
+  background-color: #f8f8f8;
+  border-radius: 2px;
+  color: #e96900;
+  font-family: Monaco, courier, monospace;
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 3px 5px;
+  white-space: pre-wrap;
+}
+.markdown-section pre {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  background-color: #f8f8f8;
+  font-family: Monaco, courier, monospace;
+  line-height: 1.5;
+  overflow: auto;
+  padding: 0 12px;
+  position: relative;
+  word-wrap: normal;
+}
+/* code highlight */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #8e908c;
+}
+.token.namespace {
+  opacity: 0.7;
+}
+.token.boolean,
+.token.number {
+  color: #c76b29;
+}
+.token.punctuation {
+  color: #525252;
+}
+.token.property {
+  color: #c08b30;
+}
+.token.tag {
+  color: #2973b7;
+}
+.token.string {
+  color: var(--theme-color, #42b983);
+}
+.token.selector {
+  color: #6679cc;
+}
+.token.attr-name {
+  color: #2973b7;
+}
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #22a2c9;
+}
+.token.attr-value,
+.token.control,
+.token.directive,
+.token.unit {
+  color: var(--theme-color, #42b983);
+}
+.token.keyword,
+.token.function {
+  color: #e96900;
+}
+.token.statement,
+.token.regex,
+.token.atrule {
+  color: #22a2c9;
+}
+.token.placeholder,
+.token.variable {
+  color: #3d8fd1;
+}
+.token.deleted {
+  text-decoration: line-through;
+}
+.token.inserted {
+  border-bottom: 1px dotted #202746;
+  text-decoration: none;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.important {
+  color: #c94922;
+}
+.token.entity {
+  cursor: help;
+}
+.markdown-section pre > code {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  background-color: #f8f8f8;
+  border-radius: 2px;
+  color: #525252;
+  display: block;
+  font-family: Monaco, courier, monospace;
+  font-size: 12px;
+  line-height: inherit;
+  margin: 0 2px;
+  max-width: inherit;
+  overflow: inherit;
+  padding: 24px 5px;
+  white-space: inherit;
+}
+.markdown-section code::after,
+.markdown-section code::before {
+  letter-spacing: 4px;
+}
+code .token {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  min-height: 15px;
+}
+pre::after {
+  color: #ccc;
+  content: attr(data-lang);
+  font-size: 8px;
+  font-weight: 600;
+  height: 15px;
+  line-height: 15px;
+  padding: 5px 10px 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+/* Custom columns */
+.markdown-section .columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 16px -1rem 24px -1rem;
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-section .column {
+  min-width: calc(33% - (1rem * 2)); /* remove from both sides */
+  max-width: 100%;
+  flex-grow: 1;
+  flex-basis: calc((40rem - 100%) * 999);
+  margin: 0 1rem 24px 1rem;
+  min-height: 100%;
+}
+.markdown-section .column img {
+  display: block;
+  margin-bottom: 16px;
+  max-width: 100%;
+}
+.markdown-section .column img + strong {
+  display: block;
+  margin-bottom: 16px;
+}

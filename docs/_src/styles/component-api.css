@@ -1,0 +1,120 @@
+/* API */
+.component-library-api table {
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    display: table;
+}
+
+.component-library-api table th {
+    font-family: 'Roboto', sans-serif;
+}
+
+.component-library-api thead td {
+    border: none;
+    padding: 12px 13px;
+    font-weight: 600;
+}
+
+.component-library-api thead .selector {
+    font-weight: 800;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.component-library-api .default-value {
+    max-width: 190px;
+}
+
+.component-library-api .prop-type {
+    display: block;
+    word-break: break-word;
+    max-width: 200px;
+}
+
+.component-library-api .description {
+    font-family: 'Roboto', sans-serif;
+}
+
+.component-library-api td.nested-content table {
+    margin-top: -10px;
+    width: 100%;
+}
+
+.component-library-api .description-tag-deprecated {
+    color: red;
+}
+
+.component-library-api .type {
+    margin-bottom: 4px;
+}
+
+.component-library-api .prop-type {
+    vertical-align: middle;
+}
+
+.component-library-api .prop-type::before {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.component-library-api .prop-type.input::after {
+    display: block;
+    content: 'Input';
+    color: #4e9cb5;
+}
+
+.component-library-api .prop-type.output::after {
+    display: block;
+    content: 'Output';
+    color: #e58824;
+}
+
+.component-library-api .type-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.component-library-api .type-list .marked {
+    border: 1px dotted var(--theme-border-main);
+}
+
+.component-library-api .type-list li {
+    margin: 2px 0;
+    cursor: pointer;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.component-library-api .type-list li:focus {
+    outline: none;
+    border-top: 1px solid var(--theme-border-main);
+    border-bottom: 1px solid var(--theme-border-main);
+}
+
+.component-library-api details {
+    padding: 0;
+    background: 0;
+    border-radius: 0;
+}
+
+.component-library-api summary {
+    display: list-item;
+    width: 100%;
+    user-select: none;
+    margin: 0;
+    padding: 4px 0;
+    font-weight: normal;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.component-library-api summary:after {
+    content: none;
+}
+
+.component-library-api summary:focus {
+    outline: none;
+    border-top: 1px solid var(--theme-border-main);
+    border-bottom: 1px solid var(--theme-border-main);
+}

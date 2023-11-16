@@ -1,0 +1,38 @@
+.highcharts[data-type="overridesHistory"] {
+    width: 100%;
+    height: 500px;
+}
+
+.highcharts[data-type="ratio"] {
+    width: 100%;
+    height: 360px;
+}
+
+.highcharts[data-type="usageCountTop"] {
+    width: 100%;
+    height: 360px;
+}
+
+.highcharts[data-type="usageCountAll"] {
+    width: 100%;
+    height: 4000px;
+}
+
+.highcharts[data-type="usageCountAll"] .highcharts-grid,
+.highcharts[data-type="usageCountTop"] .highcharts-grid {
+    display: none;
+}
+
+.highcharts-title .muted {
+    display: block;
+    color: var(--theme-discreet-text, #000);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.highcharts-tooltip {
+    background: white !important;
+    padding: 0;
+    z-index: 9999 !important;
+
+}

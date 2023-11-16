@@ -1,0 +1,4659 @@
+{
+    "contextual-overlay-link": {
+        "props": [
+            {
+                "name": "azaContextualOverlayLink",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaContent",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaTheme",
+                "type": "input",
+                "dataType": {
+                    "name": "ContextualOverlayTheme",
+                    "type": "union",
+                    "tsType": "none | primary | secondary | tertiary",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaHeader",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaHasHeader",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaContext",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaShouldStack",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaWrapHeader",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaHeight",
+                "type": "input",
+                "dataType": {
+                    "name": "ContextualOverlayHeight",
+                    "type": "union",
+                    "tsType": "number = undefined | DYNAMIC | INITIAL_HEIGHT",
+                    "nativeType": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "DYNAMIC will resize according to content, this is the default.\nINITIAL_HEIGHT will set the height fixed according to the initial height\nA number will set the height fixed to that amount of pixels.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaContextualOverlayOpened",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<ContextualOverlayOpened>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Popups & Modals",
+            "attributeComponent"
+        ],
+        "selector": "button[azaContextualOverlayLink]"
+    },
+    "disable-scroll": {
+        "props": [
+            {
+                "name": "azaDisableScroll",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaDisableMobileScroll",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "attributeComponent"
+        ],
+        "selector": "[azaDisableScroll], [azaDisableMobileScroll]"
+    },
+    "account-picker": {
+        "props": [
+            {
+                "name": "accounts",
+                "type": "input",
+                "dataType": {
+                    "name": "Account[]",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "selectedAccount",
+                "type": "input",
+                "dataType": {
+                    "name": "string | Account",
+                    "type": "union"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "screenReaderLabel",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "screenReaderLabel is prepended to trigger-content (placeholder/selectedText) for screen readers\nit should describe select purpose e.g. \"Visa avgifter för:\" (label) + \"Välj konto\" (placeholder)\nif there is a visual label on screen, this input should be the same\nor if screenReaderLabelIsId it should be the id of the visual label on screen",
+                    "tags": []
+                }
+            },
+            {
+                "name": "screenReaderLabelIsId",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "should screenReaderLabel be treated as a label string or as an ID reference to\nths visual label on screen. If true input ID from visual label on screen to screenReaderLabel.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "placeholderText",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "'Välj konto'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "iconSize",
+                "type": "input",
+                "dataType": {
+                    "name": "\"small\" | \"medium\"",
+                    "type": "union"
+                },
+                "defaultValue": "'medium'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "hasCustomTriggerContent",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onSelection",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<Account>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Form controls",
+            "tagComponent"
+        ],
+        "selector": "aza-account-picker"
+    },
+    "account-picker-item": {
+        "props": [
+            {
+                "name": "accountView",
+                "type": "input",
+                "dataType": {
+                    "name": "AccountView",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "iconSize",
+                "type": "input",
+                "dataType": {
+                    "name": "\"small\" | \"medium\"",
+                    "type": "union"
+                },
+                "defaultValue": "'medium'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-account-picker-item"
+    },
+    "select-option": {
+        "props": [
+            {
+                "name": "value",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "isDisabled",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "displayValue",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Value to show in trigger when (single) option is selected",
+                    "tags": []
+                }
+            },
+            {
+                "name": "truncateText",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onSelectionChange",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<SelectOptionSelectionChange>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-select-option"
+    },
+    "select-trigger": {
+        "props": [
+            {
+                "name": "placeholder",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Placeholder to show when no value is selected",
+                    "tags": []
+                }
+            },
+            {
+                "name": "selectedText",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "The currently selected value",
+                    "tags": []
+                }
+            },
+            {
+                "name": "hasContent",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "If you want to render ng-content instead of selectedText, pass true",
+                    "tags": []
+                }
+            },
+            {
+                "name": "isExpanded",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "isDisabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "If component selector is button, use html attribute disabled instead",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Form controls",
+            "attributeComponent",
+            "form"
+        ],
+        "selector": "aza-select-trigger, button[azaSelectTrigger]"
+    },
+    "select": {
+        "props": [
+            {
+                "name": "screenReaderLabel",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "screenReaderLabel is used to provide understandable information for screen readers.\nit should describe select purpose e.g. \"Visa avgifter för:\" (label) + \"Välj konto\" (placeholder)\nif there is a visual label on screen, this input should be the same\nor if screenReaderLabelIsId it should be the id of the visual label on screen",
+                    "tags": []
+                }
+            },
+            {
+                "name": "screenReaderLabelIsId",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "should screenReaderLabel be treated as a label string or as an ID reference to\nths visual label on screen. If true input ID from visual label on screen to screenReaderLabel.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "contextualOverlayTitle",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "panelMaxHeightDesktop",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "270",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "placeholder",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "selectedOptionsSuffix",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "When multiple options are selected, number of options selected + selectedOptionsSuffix will be used.\nE.g. \"5 konton valda\", selectedOptionsSuffix = \" konton valda\"",
+                    "tags": []
+                }
+            },
+            {
+                "name": "hasCustomTriggerContent",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Should show ng-content instead of selectedText",
+                    "tags": []
+                }
+            },
+            {
+                "name": "initialMultiselect",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Used in ngOnInit, change will have no effect after that.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "isDisabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Do not use this input when using reactive form, since it will not work,\ninstead set disabled on the control in the component class instead.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onOpen",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onClose",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "change",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<SelectChange>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "form",
+            "Form controls",
+            "tagComponent"
+        ],
+        "selector": "aza-select"
+    },
+    "button": {
+        "props": [],
+        "types": [
+            "Buttons & toggles",
+            "attributeComponent"
+        ],
+        "selector": "button[azaCtaButton], a[azaCtaButton],"
+    },
+    "icon-button": {
+        "props": [],
+        "types": [
+            "attributeComponent"
+        ],
+        "selector": "button[azaIconButton], a[azaIconButton]"
+    },
+    "cta-button": {
+        "props": [
+            {
+                "name": "inline",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Default value is null. Force inline display for medium/hero buttons",
+                    "tags": []
+                }
+            },
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "CtaButtonSize",
+                    "type": "union",
+                    "tsType": "small | medium | x-small",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Default value is 'medium'. Always use medium when theme is Hero!",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaCtaButton",
+                "type": "input",
+                "dataType": {
+                    "name": "CtaButtonTheme",
+                    "type": "union",
+                    "tsType": "primary | secondary | discreet | subtle | non-essential | hero | buy | sell",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Default value is 'primary'",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "attributeComponent"
+        ],
+        "selector": "button[azaCtaButton], a[azaCtaButton]"
+    },
+    "text-button": {
+        "props": [
+            {
+                "name": "azaTextButton",
+                "type": "input",
+                "dataType": {
+                    "name": "TextButtonTheme",
+                    "type": "union",
+                    "tsType": "primary | secondary | warning",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Default value is 'primary'",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "attributeComponent"
+        ],
+        "selector": "button[azaTextButton], a[azaTextButton]"
+    },
+    "button-icon-left": {
+        "props": [],
+        "types": [
+            "attributeComponent"
+        ],
+        "selector": "[azaButtonIconLeft]"
+    },
+    "button-icon-right": {
+        "props": [],
+        "types": [
+            "attributeComponent"
+        ],
+        "selector": "[azaButtonIconRight]"
+    },
+    "action-button": {
+        "props": [
+            {
+                "name": "iconOnly",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Whether to use only icon. Hides any text content",
+                    "tags": []
+                }
+            },
+            {
+                "name": "azaActionButton",
+                "type": "input",
+                "dataType": {
+                    "name": "ActionButtonType",
+                    "type": "union",
+                    "tsType": "add | edit | remove | back | cancel | reload | help | getdocument | getpdfdocument | externallink | settings | update",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "The type of action button",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Buttons & toggles",
+            "attributeComponent"
+        ],
+        "selector": "button[azaActionButton], a[azaActionButton]"
+    },
+    "binary-switch": {
+        "props": [
+            {
+                "name": "disabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "form",
+            "Buttons & toggles",
+            "tagComponent"
+        ],
+        "selector": "aza-binary-switch"
+    },
+    "button-toggle": {
+        "props": [
+            {
+                "name": "nullable",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": [
+                        {
+                            "name": "deprecated",
+                            "description": "DO NOT USE"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "optionStyle",
+                "type": "input",
+                "dataType": {
+                    "name": "ButtonToggleOptionStyle",
+                    "type": "union",
+                    "tsType": "pills | circular",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "optionSize",
+                "type": "input",
+                "dataType": {
+                    "name": "\"small\"",
+                    "type": "literal"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "form",
+            "Buttons & toggles",
+            "tagComponent"
+        ],
+        "selector": "aza-button-toggle"
+    },
+    "button-toggle-option": {
+        "props": [
+            {
+                "name": "tabIndex",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "value",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "disabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "selectionChange",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<ButtonToggleOptionSelectionChange>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-button-toggle-option"
+    },
+    "tooltip": {
+        "props": [
+            {
+                "name": "width",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "maxWidth",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "message",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "position",
+                "type": "input",
+                "dataType": {
+                    "name": "TooltipPosition",
+                    "type": "union",
+                    "tsType": "top | bottom | bottomLeft | bottomRight | topLeft | topRight",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-tooltip"
+    },
+    "button-with-icons-icon-left": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-button-with-icons-icon-left"
+    },
+    "button-with-icons-icon-right": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-button-with-icons-icon-right"
+    },
+    "button-with-icons": {
+        "props": [
+            {
+                "name": "buttonText",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "ButtonWithIconsTheme",
+                    "type": "union",
+                    "tsType": "primary | secondary | discreet",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'discreet'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "ButtonSize",
+                    "type": "union",
+                    "tsType": "medium | large",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'medium'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Buttons & toggles",
+            "attributeComponent"
+        ],
+        "selector": "button[azaButtonWithIcons], a[azaButtonWithIcons]"
+    },
+    "card": {
+        "props": [
+            {
+                "name": "padding",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "when true it will add default padding to the element.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "margin",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": [
+                        {
+                            "name": "deprecated",
+                            "description": "Input will be removed in the future.\nComponents in the component-library should not set margins according to our code principles.\nDefault value is FALSE"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "fullWidthMobile",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": [
+                        {
+                            "name": "deprecated",
+                            "description": "DO NOT USE will be removed in the future\nuse isFullViewportWidth instead."
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "isFullViewportWidth",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "should be true when card is full viewport width,\nit will remove border-radius on card (currently only applies on small phone)",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Layout",
+            "tagComponent"
+        ],
+        "selector": "aza-card"
+    },
+    "card-header": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-card-header"
+    },
+    "card-footer": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-card-footer"
+    },
+    "card-heading": {
+        "props": [
+            {
+                "name": "margin",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "adds margin-bottom to element",
+                    "tags": []
+                }
+            },
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": [
+                        {
+                            "name": "deprecated",
+                            "description": "DO NOT USE will be removed in the future\nuse CSS or utility classes instead."
+                        }
+                    ]
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-card-heading"
+    },
+    "card-subheading": {
+        "props": [
+            {
+                "name": "margin",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "adds margin top and bottom to the element",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-card-subheading"
+    },
+    "checkbox": {
+        "props": [
+            {
+                "name": "name",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "value",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "checked",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": [
+                        {
+                            "name": "deprecated",
+                            "description": "Do not use - will be removed - use ngModel instead."
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "disabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onCheck",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<boolean>()",
+                "documentation": {
+                    "description": "",
+                    "tags": [
+                        {
+                            "name": "deprecated",
+                            "description": "Do not use - will be removed - use ngModel instead."
+                        }
+                    ]
+                }
+            }
+        ],
+        "types": [
+            "form",
+            "Form controls",
+            "tagComponent"
+        ],
+        "selector": "aza-checkbox"
+    },
+    "circular-gauge": {
+        "props": [
+            {
+                "name": "hasTransition",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "percent",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "CircularGaugeTheme",
+                    "type": "union",
+                    "tsType": "info | alert",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "hasInnerCircleBackground",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "CtaButtonSize",
+                    "type": "union",
+                    "tsType": "small | medium | x-small",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-circular-gauge"
+    },
+    "clickable-card": {
+        "props": [
+            {
+                "name": "padding",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Layout",
+            "attributeComponent"
+        ],
+        "selector": "button[azaClickableCard], a[azaClickableCard]"
+    },
+    "contextual-menu-trigger": {
+        "props": [
+            {
+                "name": "isDisabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "whenClicked",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [],
+        "selector": "na"
+    },
+    "contextual-menu": {
+        "props": [
+            {
+                "name": "mobileMenuHeight",
+                "type": "input",
+                "dataType": {
+                    "name": "ContextualOverlayHeight",
+                    "type": "union",
+                    "tsType": "number = undefined | DYNAMIC | INITIAL_HEIGHT",
+                    "nativeType": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "mobileMenuHeader",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onMenuToggle",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<MenuState>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Popups & Modals",
+            "tagComponent"
+        ],
+        "selector": "aza-contextual-menu"
+    },
+    "contextual-overlay-template": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-contextual-overlay-template"
+    },
+    "contextual-overlay-area": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-contextual-overlay-area"
+    },
+    "datepicker": {
+        "props": [
+            {
+                "name": "value",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Pass in a value (YYYY-MM-DD) if not using formControl",
+                    "tags": []
+                }
+            },
+            {
+                "name": "placeholder",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Placeholder for the input, also used as header text in the overlay",
+                    "tags": []
+                }
+            },
+            {
+                "name": "minDate",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "This date and earlier dates will be disabled",
+                    "tags": []
+                }
+            },
+            {
+                "name": "maxDate",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "This date and later dates will be disabled",
+                    "tags": []
+                }
+            },
+            {
+                "name": "startRange",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "If you want to display a date range, this marks the start",
+                    "tags": []
+                }
+            },
+            {
+                "name": "endRange",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "If you want to display a date range, this marks the end",
+                    "tags": []
+                }
+            },
+            {
+                "name": "disabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Do not use this input when using reactive form, since it will not work,\ninstead set disabled on the control in the component class instead.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "disableWeekends",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Disables all weekends",
+                    "tags": []
+                }
+            },
+            {
+                "name": "disabledDates",
+                "type": "input",
+                "dataType": {
+                    "name": "string[]",
+                    "type": "na"
+                },
+                "defaultValue": "[]",
+                "documentation": {
+                    "description": "Array of dates (YYYY-MM-DD) that should be disabled, useful for holidays etc.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "disableKeyboardInput",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Disables keyboard input",
+                    "tags": []
+                }
+            },
+            {
+                "name": "showWeekNumber",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Displays week number to the left",
+                    "tags": []
+                }
+            },
+            {
+                "name": "mode",
+                "type": "input",
+                "dataType": {
+                    "name": "DatepickerMode",
+                    "type": "union",
+                    "tsType": "input | labelWithInput | inputUnstyled | button | inline",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "buttonLabel",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Override the button label (in responsive or 'button' mode), which by default is current value or placeholder if unset",
+                    "tags": []
+                }
+            },
+            {
+                "name": "dropdownPosition",
+                "type": "input",
+                "dataType": {
+                    "name": "DatepickerHorizontalPosition",
+                    "type": "union",
+                    "tsType": "left | right",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'left'",
+                "documentation": {
+                    "description": "Adjusts absolute positioning of the datepicker dropdown (in desktop)",
+                    "tags": []
+                }
+            },
+            {
+                "name": "verticalPosition",
+                "type": "input",
+                "dataType": {
+                    "name": "\"top\" | \"bottom\"",
+                    "type": "union"
+                },
+                "defaultValue": "'bottom'",
+                "documentation": {
+                    "description": "Adjusts absolute positioning of the datepicker dropdown (in desktop)",
+                    "tags": []
+                }
+            },
+            {
+                "name": "shouldStack",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "form",
+            "Form controls",
+            "tagComponent"
+        ],
+        "selector": "aza-datepicker"
+    },
+    "input": {
+        "props": [
+            {
+                "name": "instantValidationBorder",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Form controls",
+            "attributeComponent",
+            "form"
+        ],
+        "selector": "input[azaInput], textarea[azaInput]"
+    },
+    "input-with-label": {
+        "props": [],
+        "types": [
+            "Form controls",
+            "attributeComponent"
+        ],
+        "selector": "[azaLabelWithInput]"
+    },
+    "datepicker-button": {
+        "props": [],
+        "types": [
+            "attributeComponent"
+        ],
+        "selector": "button[azaDatepickerButton], a[azaDatepickerButton]"
+    },
+    "dialog": {
+        "props": [
+            {
+                "name": "padding",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "heading",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "topOffset",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "'0px'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "closerequest",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "This event is emitted when the user either presses the ESC key or clicks on the dimmed area outside of the dialog box\nSupply code to close the dialog (or/and anything else you might want to do) or choose to not react to this event.",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Popups & Modals",
+            "tagComponent"
+        ],
+        "selector": "aza-dialog"
+    },
+    "has-scrollbar": {
+        "props": [],
+        "types": [
+            "attributeComponent"
+        ],
+        "selector": "[azaHasScrollbar]"
+    },
+    "dialog-header": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-dialog-header"
+    },
+    "dialog-footer": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-dialog-footer"
+    },
+    "empty-state": {
+        "props": [
+            {
+                "name": "layoutHorizontal",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "EmptyStateTheme",
+                    "type": "union",
+                    "tsType": "primary | placera",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'primary'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "illustrationName",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "The illustration must be registered in your parent module when used,\ndefault illustration is \"undra_medium\" which is included in the component",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-empty-state"
+    },
+    "empty-state-body": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-empty-state-body"
+    },
+    "empty-state-title": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-empty-state-title"
+    },
+    "empty-state-illustration": {
+        "props": [
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "EmptyStateTheme",
+                    "type": "union",
+                    "tsType": "primary | placera",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'primary'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-empty-state-illustration"
+    },
+    "expansion-panel": {
+        "props": [
+            {
+                "name": "border",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "padding",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "ignoreTogglingDuringAnimation",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "renderBodyContentWhileClosed",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "expansionChange",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<ExpansionState>()",
+                "documentation": {
+                    "description": "Outputs the expansionState when the expansion panel is clicked.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "panelBeingOpened",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<boolean>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "isExpanded",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Layout",
+            "tagComponent"
+        ],
+        "selector": "aza-expansion-panel"
+    },
+    "expansion-panel-header": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-expansion-panel-header"
+    },
+    "expansion-panel-body": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-expansion-panel-body"
+    },
+    "expansion-panel-accordion": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-expansion-panel-accordion"
+    },
+    "expansion-panel-sub-header": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-expansion-panel-sub-header"
+    },
+    "feedback-experience": {
+        "props": [
+            {
+                "name": "contextIdentifier",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "'feedbackExperience'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Buttons & toggles",
+            "tagComponent"
+        ],
+        "selector": "aza-feedback-experience"
+    },
+    "icon": {
+        "props": [
+            {
+                "name": "choiceKey",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-feedback-experience-icon"
+    },
+    "button-group": {
+        "props": [
+            {
+                "name": "contextIdentifier",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "ariaRegionIdentifier",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "null",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onSelect",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<FeedbackChoice>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-feedback-experience-button-group"
+    },
+    "content-description": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-feedback-experience-content-description"
+    },
+    "content-response-happy": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-feedback-experience-content-response-happy"
+    },
+    "content-response-semi-happy": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-feedback-experience-content-response-semi-happy"
+    },
+    "content-response-semi-unhappy": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-feedback-experience-content-response-semi-unhappy"
+    },
+    "content-response-unhappy": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-feedback-experience-content-response-unhappy"
+    },
+    "flag": {
+        "props": [
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "\"small\" | \"medium\" | \"large\"",
+                    "type": "union"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "flagCode",
+                "type": "input",
+                "dataType": {
+                    "name": "\"AR\" | \"AU\" | \"BE\" | \"BR\" | \"CA\" | \"CH\" | \"CL\" | \"CN\" | \"CO\" | \"CZ\" | \"DE\" | \"DK\" | \"EG\" | \"ES\" | \"EU\" | \"FI\" | \"FR\" | \"GB\" | \"GR\" | \"HK\" | \"HU\" | \"ID\" | \"IE\" | \"IN\" | \"IS\" | \"IT\" | \"JP\" | ... 23 more ... | \"UNKNOWN\"",
+                    "type": "union"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "SE, US and UNKNOWN flags are embedded in the component,\nall other flags are loaded via URL.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "hideUnknown",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Whether to hide the flag if the flag code is unknown/invalid",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Images",
+            "tagComponent"
+        ],
+        "selector": "aza-flag"
+    },
+    "unknown": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-flag-unknown"
+    },
+    "se": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-flag-se"
+    },
+    "grid-column": {
+        "props": [
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "columnValues",
+                    "type": "union",
+                    "tsType": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | half | full | one-quarter | two-quarter | three-quarter | four-quarter | one-third | two-third | three-third",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "tablet",
+                "type": "input",
+                "dataType": {
+                    "name": "columnValues",
+                    "type": "union",
+                    "tsType": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | half | full | one-quarter | two-quarter | three-quarter | four-quarter | one-third | two-third | three-third",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "desktop",
+                "type": "input",
+                "dataType": {
+                    "name": "columnValues",
+                    "type": "union",
+                    "tsType": "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | half | full | one-quarter | two-quarter | three-quarter | four-quarter | one-third | two-third | three-third",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "class",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-grid-column"
+    },
+    "grid": {
+        "props": [
+            {
+                "name": "equalHeightChildren",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Give direct childen of aza-grid-column min-height: 100%, only applies direct child is only child.",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Layout",
+            "tagComponent"
+        ],
+        "selector": "aza-grid"
+    },
+    "infobox": {
+        "props": [
+            {
+                "name": "icon",
+                "type": "input",
+                "dataType": {
+                    "name": "InfoboxIconType",
+                    "type": "union",
+                    "tsType": "none | warning | info | positive | error",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'none'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "isDismissable",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "visible",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "should infobox be visible on screen, will be set to false\nwhen onClose() is triggered on isDismissable infobox",
+                    "tags": []
+                }
+            },
+            {
+                "name": "margin",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "",
+                    "tags": [
+                        {
+                            "name": "deprecated",
+                            "description": "SET TO FALSE will be removed in the future since\ncomponents in the component-library should not set margins\naccording to our code principles."
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "type",
+                "type": "input",
+                "dataType": {
+                    "name": "InfoBoxType",
+                    "type": "union",
+                    "tsType": "warning | info | positive | error",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onDismissed",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-infobox"
+    },
+    "institute-icon": {
+        "props": [
+            {
+                "name": "iconName",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "InstituteIconSize",
+                    "type": "union",
+                    "tsType": "medium | large | xl",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Images",
+            "tagComponent"
+        ],
+        "selector": "aza-institute-icon"
+    },
+    "label": {
+        "props": [],
+        "types": [
+            "Form controls",
+            "attributeComponent"
+        ],
+        "selector": "label[azaLabel]"
+    },
+    "list-item-text": {
+        "props": [
+            {
+                "name": "truncateText",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-list-item-text"
+    },
+    "list-item": {
+        "props": [
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "ListTheme",
+                    "type": "union",
+                    "tsType": "none | primary | positive | neutral | negative",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Theme is only visible on button, a or isFakeInteractive items",
+                    "tags": []
+                }
+            },
+            {
+                "name": "isFakeInteractive",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "When you want themes and layout on the static aza-list-item selector,\nONLY use when the ng-content is ONLY an a-tag or a button-tag\n(see why in list-item.scss a:only-child/button:only-child)",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "attributeComponent"
+        ],
+        "selector": "aza-list-item, a[azaListItem], button[azaListItem]"
+    },
+    "list": {
+        "props": [
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "ListSize",
+                    "type": "union",
+                    "tsType": "none | small | medium | large | xl",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'medium'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "indentSize",
+                "type": "input",
+                "dataType": {
+                    "name": "ListIndentSize",
+                    "type": "union",
+                    "tsType": "none | small | medium | large | xs | custom",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'medium'",
+                "documentation": {
+                    "description": "Will only be applied to dividers with isIndented\nIf set to Custom use indentCustomSize to set value",
+                    "tags": []
+                }
+            },
+            {
+                "name": "indentCustomSize",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Will only be used if indentSize is Custom\nvalue must include unit e.g. '16px'",
+                    "tags": []
+                }
+            },
+            {
+                "name": "layout",
+                "type": "input",
+                "dataType": {
+                    "name": "ListLayout",
+                    "type": "union",
+                    "tsType": "default | rounded | obround",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'default'",
+                "documentation": {
+                    "description": "Item layout is only visible if list (theme) and/or if item (theme) is set",
+                    "tags": []
+                }
+            },
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "ListTheme",
+                    "type": "union",
+                    "tsType": "none | primary | positive | neutral | negative",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Theme is only visible on button, a or isFakeInteractive items",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Layout",
+            "tagComponent"
+        ],
+        "selector": "aza-list"
+    },
+    "list-item-prepend": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-list-item-prepend"
+    },
+    "list-title": {
+        "props": [
+            {
+                "name": "hasDivider",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-list-title"
+    },
+    "list-divider": {
+        "props": [
+            {
+                "name": "isIndented",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Indent divider by size set in (parent)",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-list-divider"
+    },
+    "list-selection-title": {
+        "props": [
+            {
+                "name": "hasDivider",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-list-selection-title"
+    },
+    "list-option-text": {
+        "props": [
+            {
+                "name": "truncateText",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-list-option-text"
+    },
+    "list-option": {
+        "props": [
+            {
+                "name": "shouldToggleAll",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "only works if list is multiselect and on non-disabled items",
+                    "tags": []
+                }
+            },
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "ListSelectionTheme",
+                    "type": "union",
+                    "tsType": "none | primary | neutral",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "initialValue",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Initial value for this option.\nCan not be changed after instantiation.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "selectedValue",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "If you want to ListSelectionChange to emit something other than initialValue in selectedValue\ne.g. a non-string value like an object.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "disabled",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Whether this specific option is disabled.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "whenClicked",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<ListOptionComponent>()",
+                "documentation": {
+                    "description": "When you need to revice click to handle e.g.\ntoggeling ascending/descending sort order",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-list-option"
+    },
+    "list-option-prepend": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-list-option-prepend"
+    },
+    "list-option-psuedo-input": {
+        "props": [
+            {
+                "name": "inputType",
+                "type": "input",
+                "dataType": {
+                    "name": "ListSelectionInputType",
+                    "type": "union",
+                    "tsType": "none | checkbox | radio | switch",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'none'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-list-option-psuedo-input"
+    },
+    "list-selection": {
+        "props": [
+            {
+                "name": "selectionChange",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<ListSelectionChange>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "initiallySelected",
+                "type": "input",
+                "dataType": {
+                    "name": "string | string[]",
+                    "type": "union"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Used in ngAfterContentInit, change will have no effect after that.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "initialMultiselect",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "Used in ngOnInit, change will have no effect after that.\nWill only be applies when initialOptionsType is None (default)",
+                    "tags": []
+                }
+            },
+            {
+                "name": "initialOptionsType",
+                "type": "input",
+                "dataType": {
+                    "name": "ListSelectionInputType",
+                    "type": "union",
+                    "tsType": "none | checkbox | radio | switch",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'none'",
+                "documentation": {
+                    "description": "Used in ngOnInit, change will have no effect after that.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "ListSize",
+                    "type": "union",
+                    "tsType": "none | small | medium | large | xl",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'medium'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "indentSize",
+                "type": "input",
+                "dataType": {
+                    "name": "ListSelectionIndentSize",
+                    "type": "union",
+                    "tsType": "none | small | medium | large | xl | xs | custom",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'medium'",
+                "documentation": {
+                    "description": "Will only be applied to dividers with isIndented\nIf set to Custom use indentCustomSize to set value",
+                    "tags": []
+                }
+            },
+            {
+                "name": "indentCustomSize",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Will only be used if indentSize is Custom\nvalue must include unit e.g. '16px'",
+                    "tags": []
+                }
+            },
+            {
+                "name": "layoutReversed",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "layout",
+                "type": "input",
+                "dataType": {
+                    "name": "ListLayout",
+                    "type": "union",
+                    "tsType": "default | rounded | obround",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'default'",
+                "documentation": {
+                    "description": "Option layout is only visible if theme is set on list/option",
+                    "tags": []
+                }
+            },
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "ListSelectionTheme",
+                    "type": "union",
+                    "tsType": "none | primary | neutral",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Options theme for the options children of this list.\nNote that children's themes can be set individually, which overrides the parent's theme.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "disabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Whether entire list should be disabled.\nNote that options can be disabled individually,",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Layout",
+            "tagComponent"
+        ],
+        "selector": "aza-list-selection"
+    },
+    "list-selection-divider": {
+        "props": [
+            {
+                "name": "isIndented",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Indent item by size set in (parent) list",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-list-selection-divider"
+    },
+    "loading-indicator": {
+        "props": [
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "\"small\" | \"medium\" | \"large\"",
+                    "type": "union"
+                },
+                "defaultValue": "large",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-loading-indicator"
+    },
+    "custom-loading-interface": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-custom-loading-interface"
+    },
+    "loading-state-wrapper": {
+        "props": [
+            {
+                "name": "loadingThreshold",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "500",
+                "documentation": {
+                    "description": "The number of milliseconds to wait before showing the loading indicator (or custom loading interface)",
+                    "tags": []
+                }
+            },
+            {
+                "name": "minDisplayDuration",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "500",
+                "documentation": {
+                    "description": "The minimum number of milliseconds to show the loading indicator, or custom loading interface, once it has been shown.\nThe purpose is to avoid flickering loading screens.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "showOverlayImmediately",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Whether to show the overlay immadiately. Only affects the overlay. The contained loading indicator or custom loading interface will still respect the loadingThreshold.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "useViewportCenteredIndicator",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Whether to center the loading indicator in the viewport using position: fixed. Does NOT affect the overlay, and does NOT apply to custom loading interfaces.\nShould only be used for full-screen loading indicators.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "relative",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "loading",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-loading-state-wrapper"
+    },
+    "loading-overlay": {
+        "props": [
+            {
+                "name": "useViewportCenteredIndicator",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-loading-overlay"
+    },
+    "skeleton-card": {
+        "props": [
+            {
+                "name": "rounded",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-skeleton-card"
+    },
+    "skeleton-image": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-skeleton-image"
+    },
+    "skeleton-list-item": {
+        "props": [
+            {
+                "name": "hasImage",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-skeleton-list-item"
+    },
+    "skeleton-preset-default": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-skeleton-preset-default"
+    },
+    "skeleton-preset-event-feed": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-skeleton-preset-event-feed"
+    },
+    "skeleton-preset-financial-instrument": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-skeleton-preset-financial-instrument"
+    },
+    "skeleton-preset-list": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-skeleton-preset-list"
+    },
+    "skeleton-reserved-area": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-skeleton-reserved-area"
+    },
+    "skeleton-text": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-skeleton-text"
+    },
+    "loading-skeleton": {
+        "props": [
+            {
+                "name": "screenReaderText",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "'Laddar innehåll'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-loading-skeleton"
+    },
+    "notification-dot": {
+        "props": [
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "NotificationDotTheme",
+                    "type": "union",
+                    "tsType": "alert | incite",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'alert'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "\"small\" | \"medium\"",
+                    "type": "union"
+                },
+                "defaultValue": "'small'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-notification-dot"
+    },
+    "notification-messages": {
+        "props": [],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-notification-messages"
+    },
+    "number-badge": {
+        "props": [
+            {
+                "name": "value",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "The value to show",
+                    "tags": []
+                }
+            },
+            {
+                "name": "showIfEmpty",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Should the badge show when no value is set",
+                    "tags": []
+                }
+            },
+            {
+                "name": "truncateCutoff",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "99",
+                "documentation": {
+                    "description": "Set if you want to truncate the value. Set to null to get no truncation",
+                    "tags": []
+                }
+            },
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "BadgeTheme",
+                    "type": "union",
+                    "tsType": "primary | alert | neutral",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'neutral'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "isSmall",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "hasOutline",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-number-badge"
+    },
+    "number-direction-color": {
+        "props": [
+            {
+                "name": "azaNumberDirectionColor",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Note: Does not round any values. So 0.001 will show as positive, -0.001 will show as negative etc.\nSo make sure to round the value before using in the directive",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "attributeComponent"
+        ],
+        "selector": "[azaNumberDirectionColor]"
+    },
+    "numpad": {
+        "props": [
+            {
+                "name": "decimalSeparator",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "collapsed",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onInput",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<NumpadChar>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onBackspace",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Form controls",
+            "tagComponent"
+        ],
+        "selector": "aza-numpad"
+    },
+    "numpad-area-top": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-numpad-area-top"
+    },
+    "numpad-area-right": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-numpad-area-right"
+    },
+    "numpad-control-suggestions": {
+        "props": [
+            {
+                "name": "items",
+                "type": "input",
+                "dataType": {
+                    "name": "NumpadSuggestionItem[]",
+                    "type": "na"
+                },
+                "defaultValue": "[]",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onSelect",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<NumpadSuggestionItem>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-numpad-control-suggestions"
+    },
+    "numpad-control-steppers": {
+        "props": [
+            {
+                "name": "increaseDisabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "decreaseDisabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onIncrease",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onDecrease",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-numpad-control-steppers"
+    },
+    "numpad-keys": {
+        "props": [
+            {
+                "name": "decimalSeparator",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "charPressed",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<NumpadChar>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "backspacePressed",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-numpad-keys"
+    },
+    "numpad-area-left": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-numpad-area-left"
+    },
+    "numpad-area-bottom": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-numpad-area-bottom"
+    },
+    "numpad-control-collapser": {
+        "props": [
+            {
+                "name": "onClick",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-numpad-control-collapser"
+    },
+    "pair-list": {
+        "props": [],
+        "types": [
+            "Layout",
+            "tagComponent"
+        ],
+        "selector": "aza-pair-list"
+    },
+    "list-value": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-pair-list-value"
+    },
+    "list-key": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-pair-list-key"
+    },
+    "list-row": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-pair-list-row"
+    },
+    "radiobutton": {
+        "props": [
+            {
+                "name": "name",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "name should be the same for all radio buttons in the same group",
+                    "tags": []
+                }
+            },
+            {
+                "name": "value",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "defines the unique value associated with each radio button",
+                    "tags": []
+                }
+            },
+            {
+                "name": "required",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "selected",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "disabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onSelect",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<any>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onTouched",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<boolean>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Form controls",
+            "tagComponent"
+        ],
+        "selector": "aza-radiobutton"
+    },
+    "radiobutton-group": {
+        "props": [
+            {
+                "name": "name",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "disabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Do not use this input when using reactive form, since it will not work,\ninstead set disabled on the control in the component class instead.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "required",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "form",
+            "Form controls",
+            "tagComponent"
+        ],
+        "selector": "aza-radiobutton-group"
+    },
+    "read-more-expander": {
+        "props": [
+            {
+                "name": "visibleLines",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Layout",
+            "tagComponent"
+        ],
+        "selector": "aza-read-more-expander"
+    },
+    "simple-slider-drag-handle": {
+        "props": [],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-simple-slider-drag-handle"
+    },
+    "simple-slider": {
+        "props": [
+            {
+                "name": "value",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "min",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "0",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "max",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "100",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "stepSize",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "1",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "exponent",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onDraggedToMaxValue",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "form",
+            "Form controls",
+            "tagComponent"
+        ],
+        "selector": "aza-simple-slider"
+    },
+    "drag-handle": {
+        "props": [
+            {
+                "name": "value",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "isBeingDragged",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "suffix",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "dragMarkerColor",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "null",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "stepSize",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "SliderTheme",
+                    "type": "union",
+                    "tsType": "default | light",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-drag-handle"
+    },
+    "slider": {
+        "props": [
+            {
+                "name": "value",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "min",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "0",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "max",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "100",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "constraintMin",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "Number.NEGATIVE_INFINITY",
+                "documentation": {
+                    "description": "Prevents slider from assuming a value less than this constraint",
+                    "tags": []
+                }
+            },
+            {
+                "name": "constraintMax",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "Number.POSITIVE_INFINITY",
+                "documentation": {
+                    "description": "Prevents slider from assuming a value greater than this constraint",
+                    "tags": []
+                }
+            },
+            {
+                "name": "stepSize",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "1",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "suffix",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "''",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "filledLineColor",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "null",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "SliderTheme",
+                    "type": "union",
+                    "tsType": "default | light",
+                    "nativeType": "string"
+                },
+                "defaultValue": "'default'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "hideDragHandle",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onDraggedToMaxValue",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<void>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "form",
+            "Form controls",
+            "tagComponent"
+        ],
+        "selector": "aza-slider"
+    },
+    "slider-with-input": {
+        "props": [
+            {
+                "name": "theme",
+                "type": "input",
+                "dataType": {
+                    "name": "SliderTheme",
+                    "type": "union",
+                    "tsType": "default | light",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "min",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "0",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "max",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "100",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "constraintMin",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "Number.NEGATIVE_INFINITY",
+                "documentation": {
+                    "description": "Prevents slider from assuming a value less than this constraint",
+                    "tags": []
+                }
+            },
+            {
+                "name": "constraintMax",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "Number.POSITIVE_INFINITY",
+                "documentation": {
+                    "description": "Prevents slider from assuming a value greater than this constraint",
+                    "tags": []
+                }
+            },
+            {
+                "name": "allowInputOutOfBounds",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "true",
+                "documentation": {
+                    "description": "If true, the user can input a number that is below min or above max when manually entering a number.\nThis is useful in situations where the min and max numbers are just suggestions.",
+                    "tags": []
+                }
+            },
+            {
+                "name": "stepSize",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "1",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "suffix",
+                "type": "input",
+                "dataType": {
+                    "name": "string",
+                    "type": "native"
+                },
+                "defaultValue": "''",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "filledLineColor",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "null",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "form",
+            "Form controls",
+            "tagComponent"
+        ],
+        "selector": "aza-slider-with-input"
+    },
+    "stack": {
+        "props": [
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "\"small\" | \"medium\" | \"large\"",
+                    "type": "union"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "Can be: small | medium | large",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Layout",
+            "tagComponent"
+        ],
+        "selector": "aza-stack"
+    },
+    "step-indicator": {
+        "props": [
+            {
+                "name": "steps",
+                "type": "input",
+                "dataType": {
+                    "name": "string[]",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "currentStep",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "0-indexed",
+                    "tags": []
+                }
+            },
+            {
+                "name": "mode",
+                "type": "input",
+                "dataType": {
+                    "name": "StepIndicatorMode",
+                    "type": "union",
+                    "tsType": "non_interactive | interactive",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "clickablePredicate",
+                "type": "input",
+                "dataType": {
+                    "name": "(index: number, currentStep: number) => boolean",
+                    "type": "na"
+                },
+                "defaultValue": "this.defaultClickablePredicate",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onStepClick",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<number>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-step-indicator"
+    },
+    "table": {
+        "props": [
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "\"small\" | \"medium\" | \"large\"",
+                    "type": "union"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "attributeComponent"
+        ],
+        "selector": "table[azaTable]"
+    },
+    "th-sortable": {
+        "props": [
+            {
+                "name": "sortDirection",
+                "type": "input",
+                "dataType": {
+                    "name": "SortDirection",
+                    "type": "union",
+                    "tsType": "ASCENDING | DESCENDING",
+                    "nativeType": "string"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "textIsRightAligned",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Pass true if using text-align: right on this th, uses a spacing hack that avoids table width jump when sorting",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "attributeComponent"
+        ],
+        "selector": "th[azaTableThSortable]"
+    },
+    "toggle-option": {
+        "props": [
+            {
+                "name": "value",
+                "type": "input",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "selected",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "disabled",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onClicked",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter<ToggleOptionComponent>()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "tagComponent"
+        ],
+        "selector": "aza-toggle-option"
+    },
+    "toggle-switch": {
+        "props": [
+            {
+                "name": "size",
+                "type": "input",
+                "dataType": {
+                    "name": "\"small\" | \"medium\"",
+                    "type": "union"
+                },
+                "defaultValue": "'medium'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "dragMarkerAutoWidth",
+                "type": "input",
+                "dataType": {
+                    "name": "number",
+                    "type": "native"
+                },
+                "defaultValue": "100",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "autoToggle",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "Funkar endast vid 2 element",
+                    "tags": []
+                }
+            },
+            {
+                "name": "autoWidth",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "tabStyling",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": [
+                        {
+                            "name": "deprecated",
+                            "description": "Kommer tas bort när det finns en komponent som kan ersätta denna"
+                        }
+                    ]
+                }
+            }
+        ],
+        "types": [
+            "form",
+            "Buttons & toggles",
+            "tagComponent"
+        ],
+        "selector": "aza-toggle-switch"
+    },
+    "tags": {
+        "props": [
+            {
+                "name": "items",
+                "type": "input",
+                "dataType": {
+                    "name": "TagItem[]",
+                    "type": "na"
+                },
+                "defaultValue": "na",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "tagsLayout",
+                "type": "input",
+                "dataType": {
+                    "name": "\"scroll\" | \"cloud\"",
+                    "type": "union"
+                },
+                "defaultValue": "'cloud'",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "tagsClickable",
+                "type": "input",
+                "dataType": {
+                    "name": "boolean",
+                    "type": "native"
+                },
+                "defaultValue": "false",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            },
+            {
+                "name": "onTagClicked",
+                "type": "output",
+                "dataType": {
+                    "name": "any",
+                    "type": "na"
+                },
+                "defaultValue": "new EventEmitter()",
+                "documentation": {
+                    "description": "",
+                    "tags": []
+                }
+            }
+        ],
+        "types": [
+            "Indicators & information",
+            "tagComponent"
+        ],
+        "selector": "aza-tags"
+    }
+}

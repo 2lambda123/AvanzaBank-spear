@@ -1,0 +1,220 @@
+/* Changelog */
+
+ul.component-history-list {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 20px;
+}
+
+.history-item {
+    position: relative;
+    padding: 16px;
+
+}
+
+.history-item.version {
+    border-top: 1px solid #F1F1F1;
+}
+.history-item.version:first-child {
+    border-top: 1px solid transparent;
+
+}
+.history-item.mr + .version {
+    margin-top: 16px;
+}
+
+.history-item .version-title {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.history-item .version-parts {
+    color: var(--theme-text);
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: monospace;
+    border-radius: 4px;
+    display: inline-block;
+    white-space: nowrap;
+    width: 100px;
+    flex: none;
+}
+
+.history-item .version-parts * {
+    padding: 4px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.history-item.mr {
+    padding-top: 0;
+    padding-left: 32px;
+    position: relative;
+}
+
+.history-item.mr:before {
+    content: '';
+    height: calc(100% - 16px);
+    width: 2px;
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 0;
+    border-radius: 8px;
+    background: #ccc;
+
+}
+
+.version-parts * {
+    position: relative;
+}
+
+.version-parts.major *:first-child:after,
+.version-parts.minor *:nth-child(2):after,
+.version-parts.patch *:last-child:after {
+    content: '';
+    width: calc(100% - 8px);
+    height: 2px;
+    border-radius: 8px;
+    display: block;
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+}
+
+.version-parts.major *:first-child {
+    color: #BA093B;
+    background-color: #FFE8EE;
+}
+
+.version-parts.major *:first-child:after {
+    background: #BA093B;
+}
+
+.version-parts.minor *:nth-child(2) {
+    color: #963309;
+    background-color: #FEEAD3;
+}
+
+.version-parts.minor *:nth-child(2):after {
+    background: #963309;
+}
+
+.version-parts.patch *:last-child {
+    color: #076E55;
+    background-color: #E5F8F2;
+}
+.version-parts.patch *:last-child:after {
+    background: #076E55;
+}
+
+.history-item .version-datetime {
+    color: #838383;
+    font-size: 12px;
+    line-height: 1.2;
+    display: block;
+    margin-top: 2px;
+    flex-grow: 1; 
+    text-align: right;
+    white-space: nowrap;
+}
+
+.history-item .mr-title {
+    display: block;
+    color: #472FAE;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.history-item .mr-title {
+    text-decoration: none;
+}
+
+.history-item .mr-title:hover {
+    text-decoration: underline;
+}
+
+.history-item .mr-details {
+    display: inline-flex;
+    align-items: center;
+    color: #838383;
+    font-size: 12px;
+    line-height: 1.2;
+    margin-top: 8px;
+}
+
+.mr-details a {
+    border-radius: 500px;
+    overflow: hidden;
+    display: inline-block;
+    border: 2px solid white;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .25);
+}
+
+.mr-details .reviewers {
+    position: relative;
+    padding-left: 22px;
+}
+
+.mr-details .reviewers:before {
+    content: '';
+    background-image: url('../../_media/high_five.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+}
+
+.mr-details a + a {
+    margin-left: -12px;
+}
+.mr-details img {
+    height: 22px;
+    width: 22px;
+    display: block;
+}
+
+#no-history-text.hidden {
+    display: none;
+}
+
+.component-history-list .view-more {
+    display: block;
+    position: relative;
+    color: #555;
+    background: #f2f2f2;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 20px;
+    margin: -12px auto 0 auto;
+}
+
+.component-history-list .view-more:hover {
+    cursor: pointer;
+    background: lightgray;
+}
+.version-commit-message {
+    font-size: 14px;
+    color: #222;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 20px;
+}
+
+.branch-message {
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    background: white;
+    padding: 0 4px;
+    font-size: 12px;
+    color: #838383;
+}

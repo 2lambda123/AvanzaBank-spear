@@ -1,0 +1,36 @@
+:root {
+    /* Brand */
+    --theme-color: #00c281;
+    --theme-gradient: linear-gradient(134.99deg, #472fae 6.41%, #6a5dff 33.56%, #21dfb2 70.98%);
+
+    /* Text */
+    --theme-text: #222;
+    --theme-discreet-text: #6a6a6a;
+    --theme-subtle-text: #aeaeae;
+    --theme-heading: #148b6e;
+
+    /* Surface */
+    --theme-surface-main: #fff;
+    --theme-surface-main-hover: #fafafa;
+
+    /* Border */
+    --theme-border-main: #364149;
+    --theme-border-discreet: #dedede;
+
+    /* Link */
+    --theme-link: #0087b1;
+
+    /* Button */
+    --theme-button-normal: #00c281;
+    --theme-button-hover: #02b07d;
+    --theme-button-text: #fff;
+
+    --caret-dim: 18px;
+    --caret-line-width: calc(var(--caret-dim) / 7);
+}
+
+.sidebar {
+    --theme-text: #fff;
+    --theme-color: #b2ecd9;
+    --theme-link: #fff;
+}
